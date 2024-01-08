@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔪 🧀</title>
+</head>
+
+<body>
+    <div id="conteudo">
+        <h2>Aceita continuar comigo pro resto de nossas vidas?</h2>
+        <div class="botoes">
+            <button class="btn" onclick="sim()">SIM</button>
+            <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">NÃO</button>
+        </div>
+    </div>
+</body>
+
+<style>
+    @font-face {
+        font-family: DancingLetter;
+        src: url(DancingScript-Bold.ttf);
+    }
+    body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(to bottom, #ff6666, #ff3333);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #conteudo {
+        background: rgba(255, 255, 255, 0.8);
+        width: 80%;
+        padding: 20px;
+        font-size: x-large;
+        text-align: center;
+        font-family: DancingLetter;
+        border-radius: 15px;
+    }
+
+    .botoes {
+        margin-top: 20px;
+    }
+
+    .btn {
+        font-family: DancingLetter;
+        font-size: medium;
+        background: rgb(0, 0, 0);
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 80px;
+        border-radius: 15px;
+        margin: 0 10px;
+    }
+</style>
+
+<script>
+    function sim() {
+        alert("Você aceitou continuar comigo pra vida toda!! :)");
+        location.href = "https://music.youtube.com/watch?v=izGwDsrQ1eQ";
+    }
+
+    function desvia(btn) {
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei...');
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+</script>
+
+</html>
